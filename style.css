@@ -1,0 +1,289 @@
+*{
+  box-sizing: border-box;
+}
+
+header{
+  height:52px;
+  text-shadow: 4px 4px 4px rgb(22, 71, 110);
+  color:#006685;
+  font-size: 52px;
+  text-align: center;
+  margin-bottom: 18px;
+
+}
+body{
+  background-color: black;
+
+  background-blend-mode: lighten;
+
+
+
+  font-family: 'Orbitron', sans-serif;
+}
+
+.container{
+  width: 1200px;
+  height: 750px;
+
+  display: flex;
+  justify-content:space-between;
+  margin: auto;
+
+}
+.buttons{
+
+  width: 200px;
+  height:23%;
+  display:flex;
+  flex-direction: column;
+  margin:0 10px;
+  align-items: center;
+  text-align: center;
+
+}
+
+.startButton{
+  cursor: pointer;
+}
+
+
+.startButton{
+  text-shadow: 2px 2px 2px rgb(0, 139, 133);
+  width: 180px;
+  height: 40px;
+  border: 3px solid #00818acb;
+  background-color: #97efeb;
+  color:#2aa1be;
+  margin:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  border-radius: 6px;
+
+}
+
+
+.levelOfDifficulty{
+  width: 150px;
+  height: 45px;
+  border: 3px solid #14776f;
+  border-radius: 6px;
+  background-color: #97efeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+select{
+  width: 150px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.maze{
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  height:100%;
+  justify-content: center;
+  max-height: 800px;
+  max-width: 800px;
+  border: 3px solid #1c92a1;
+  border-radius: 6px;
+}
+
+.maze div{
+  flex-grow: 1;
+  width: calc(100% / 20);
+   height: calc(100% / 20);
+   background-color: black;
+}
+.maze div.player[data-direction="forward"] {
+  transform: scaleX(1);
+}
+.maze div.player[data-direction="upward"] {
+  transform: rotate(-90deg);
+}
+.maze div.player[data-direction="downward"] {
+  transform: rotate(90deg);
+}
+.player{
+  flex-grow: 1;
+  height:10%;
+  width: 10%;
+  background-image: url('images/pacman-spritesheet.png');
+ 
+  background-repeat: no-repeat;
+  background-size: 194px;
+}
+.maze div.player[data-direction="backward"] {
+  transform: scaleX(-1);
+}
+
+
+.maze div.player[data-step="0"] {
+  background-position-x: 2px;
+  background-position-y: 0;
+}
+
+.maze div.player[data-step="1"] {
+  background-position-x: -40px;
+  background-position-y: 0;
+}
+
+.maze div.player[data-step="2"] {
+  background-position-x: -80px;
+  background-position-y: 0;
+}
+
+.maze div.player[data-step="3"] {
+  background-position-x:-120px;
+  background-position-y: 0;
+}
+
+.maze div.player[data-step="4"] {
+  background-position-x: -160px;
+  background-position-y: 0;
+}
+
+
+.wall{
+  flex-grow: 1;
+  height:10%;
+  width: 10%;
+
+  background-image: url('images/wall.png');
+}
+.way{
+  flex-grow: 1;
+  height:10%;
+  width: 10%;
+  border:  1px solid black;
+  background-color: black;
+}
+
+
+.timeScore{
+
+  width: 200px;
+  height:6.5%;
+  color:#2aa1be;
+  display: flex;
+  flex-wrap: wrap;
+  color:#2aa1be;
+  font-size: 26px;
+  margin:0 10px;
+  text-shadow: 2px 2px 2px rgb(8, 102, 139);
+
+
+}
+.time{
+  width: 50%;
+  height: 50px;
+  border: 3px solid #1c92a1;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.resultGame{
+  width: 100%;
+  height: 80px;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgb(8, 102, 139);
+  border: 3px solid #1c92a1;
+
+  border-radius: 6px;
+
+
+}
+
+.jeringa{
+  flex-grow: 1;
+  height:2%;
+  width: 2%;
+  background-image: url('images/jeringa.png');
+  background-size:contain;
+  background-position: center;
+
+}
+.pastilla{
+  flex-grow: 1;
+  height:2%;
+  width: 2%;
+  background-image: url('images/pastilla.png');
+  background-size:contain;
+
+}
+.score{
+  width: 50%;
+  height: 50px;
+  border: 3px solid #1c92a1;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.winner{
+  width: 100%;
+  height: 190px;
+  color:#2aa1be;
+  text-align: center;
+  background-image: url('images/winner.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+
+}
+
+.cepa1{
+  flex-grow: 1;
+  height:10%;
+  width: 10%;
+  background-image: url('images/cepa1.png');
+  background-size: cover;
+}
+.cepa2{
+  flex-grow: 1;
+  height:10%;
+  width: 10%;
+  background-image: url('images/cepa2.png');
+  background-size: cover;
+}
+.cepa3{
+  flex-grow: 1;
+  height:10%;
+  width: 10%;
+  background-image: url('images/cepa3.png');
+  background-size: cover;
+}
+.cepaDebil{
+  flex-grow: 1;
+  height:10%;
+  width: 10%;
+  background-image: url('images/cepaAzul.png');
+  background-size: cover;
+}
+
+
+
+.deathpacman{
+  height:10%;
+  width: 10%;
+  background-image: url('images/deathpacman.png');
+}
+.winnerText{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size:36px;
+
+  border: 3px solid #1c92a1;
+
+
+}
